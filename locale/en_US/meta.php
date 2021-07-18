@@ -1,0 +1,48 @@
+<?php
+  
+  function metas() {
+   
+    return [
+             'DASHBOARD'=> 'Dashboard',
+             'WEBSITES'=> 'Websites',
+             'ZONES'=> 'Zones',
+             'IMAGE_BANNERS'=> 'Image Baners',
+             'TEXT_BANNERS'=> 'Text Banners', 
+             'POPUPS'=> 'Popups',
+             'DIRECTS'=> 'Directs',
+             'USERS'=> 'Users',
+             'TOP_USERS'=> 'Top Users',
+             'ADD_USER'=> 'Add User',
+             'INVOICES'=> 'Invoices',
+             'STATS'=> 'Stats', 
+             'ANNOUNCEMENTS'=> 'Announcements', 
+             'ADD_SITE'=> 'Add Site',
+             'CREATE_ZONE'=> 'Create Zone',
+             'REFERRALS'=> 'Referrals',
+             'WITHDRAWAL'=> 'Withdrawal',
+             'WITHDRAWAL_HISTORY'=> 'Withdrawal History',
+             'PURCHASE'=> 'Purchase',
+             'ORDER_IMAGE_BANNER'=> 'Order Image Banner', 
+             'ORDER_TEXT_BANNER'=> 'Order Text Banner', 
+             'ORDER_POPUP'=> 'Order Popup', 
+             'ORDER_DIRECT'=> 'Order Direct', 
+             'CHOOSE_METHOD'=> 'Choose Method', 
+             'BANK_TRANSFER'=> 'Bank Transfer', 
+             'CREDIT_CARD'=> 'Credit Card', 
+             'ZONE_CODE'=> 'Zone Code', 
+             'CHANGE_YOUR_PASSWORD'=> 'Change Your Password',
+             'SETTINGS'=> 'Settings',
+             'SUPPORT'=> 'Support',
+             'DEPOSIT'=> 'Deposit',
+             'CHECKOUT'=> 'Checkout',
+             'PAGE_NOT_FOUND'=> 'Page Not Found',
+             'CSRF_TOKEN_MISMATCH'=> 'CSRF token mismatch',
+             'COINBASE_SETUP'=> 'Coinbase Setup',
+             'PAYPAL_SETUP'=> 'PayPal Setup',
+             'STRIPE_SETUP'=> 'Stripe Setup',
+             'SIGN_IN'=> 'Sign In',
+             'SIGN_UP'=> 'Sign Up',
+             'FORGOT_YOUR_PASSWORD'=> 'Forgot Your Password',
+             'RESET_PASSWORD'=> 'Reset Password'
+            ];
+  }
