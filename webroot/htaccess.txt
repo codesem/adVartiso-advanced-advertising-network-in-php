@@ -1,0 +1,36 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^/]+/)*[^.#?\ ]+\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(([^/]+/)*[^.]+)\.php /$1 [R=301,L]
+
+ErrorDocument 404 /webroot/pages/404.php
+
+Options -Indexes
+Options +FollowSymLinks
+
+RewriteRule ^ref/([a-zA-Z0-9_-]+)/ ref.php?id=$1
+RewriteRule ^page/([a-zA-Z0-9_-]+)/ pages/index.php?id=$1
+RewriteRule ^redirect/(.*)/ redirect.php?id=$1
+RewriteRule ^verify/([a-zA-Z0-9_-]+)/ verify.php?id=$1
+RewriteRule ^admin/users/edit/([a-zA-Z0-9_-]+)/ admin/users/edit.php?id=$1
+RewriteRule ^admin/users/view/([a-zA-Z0-9_-]+)/ admin/users/view.php?id=$1
+RewriteRule ^admin/announcements/edit/([a-zA-Z0-9_-]+)/ admin/announcements/edit.php?id=$1
+RewriteRule ^admin/pages/edit/([a-zA-Z0-9_-]+)/ admin/pages/edit.php?id=$1
+RewriteRule ^auth/forgot-password/([a-zA-Z0-9_-]+)/ auth/forgot-password.php?id=$1
+RewriteRule ^auth/reset-password/([a-zA-Z0-9_-]+)/ auth/reset-password.php?id=$1
+RewriteRule ^member/zones/code/([a-zA-Z0-9_-]+)/ member/zones/code.php?id=$1
+RewriteRule ^zones/banner/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/ zones/banner.php?id=$1&clicked=$2
+RewriteRule ^zones/banner/([a-zA-Z0-9_-]+)/ zones/banner.php?id=$1
+RewriteRule ^zones/popup/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/ zones/popup.php?id=$1&clicked=$2
+RewriteRule ^zones/popup/([a-zA-Z0-9_-]+)/ zones/popup.php?id=$1
+RewriteRule ^zones/direct/([a-zA-Z0-9_-]+)/ zones/direct.php?id=$1
+RewriteRule ^zones/preview/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/ zones/preview.php?type=$1&size=$2
+RewriteRule ^advertiser/deposit/invoice/([a-zA-Z0-9_-]+)/ advertiser/deposit/invoice.php?id=$1
+RewriteRule ^advertiser/checkout/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/ advertiser/checkout.php?id=$1&method=$2
+RewriteRule ^advertiser/deposit/bank-info/([a-zA-Z0-9_-]+)/ advertiser/deposit/bank-info.php?id=$1
+RewriteRule ^advertiser/deposit/stripe/([a-zA-Z0-9_-]+)/ advertiser/deposit/stripe.php?id=$1
+
+DirectoryIndex index.php
