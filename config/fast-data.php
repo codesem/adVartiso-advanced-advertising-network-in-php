@@ -17,32 +17,24 @@
  else:
       require_once ('config.php');
  endif;
-
   require_once (CONNECT.'dbconnect.class.php');
   require_once (MODELS.'smartyModel.php');
   require_once (CONFIG.'function.php');
-  require_once (MODELS.'requestModel.php');
-  require_once (MODELS.'functionModel.php');
-  require_once (MODELS.'pluginModel.php');
+  require_once (MODELS.'adsModel.php');
 
-  $fun->do_host();
-
+  $ads->do_host();
+ 
  //ON
  if ($info->install == 'on'):
      
      $uid = $se->new_session('user','logged','uid');
-     $result = pages();
      $smart->users($uid);
      $smart->sign_option();
      $smart->sign_user_fun();
-     $fun->do_user($uid);
-     $fun->do_lang(do_config(12));
-     $fun->do_notifications();
-     $fun->do_pages();
-     $fun->do_protected_pages();
-     $fun->do_circle_stats();
+     $ads->do_user($uid);
+     $ads->do_lang(do_config(12));
 
   //OFF
  elseif($info->install == 'off'):
-  $fun->do_install();
+  $ads->do_install();
  endif;
